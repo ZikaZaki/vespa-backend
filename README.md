@@ -2,14 +2,14 @@
 
 <div align="center">
 
-  <h3><b>Hello-Rails-Back-End</b></h3>
+  <h3><b>Vespa-Backend</b></h3>
 
 </div>
 
 # 📗 Table of Contents
 
 - [📗 Table of Contents](#-table-of-contents)
-- [📖 Hello-Rails-Back-End ](#-hello-rails-back-end-)
+- [📖 Vespa-Backend ](#-vespa-backend-)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
@@ -29,11 +29,9 @@
   - [🙏 Acknowledgments ](#-acknowledgments-)
   - [📝 License ](#-license-)
 
-<!-- PROJECT DESCRIPTION -->
+# 📖 Vespa-Backend <a name="about-project"></a>
 
-# 📖 Hello-Rails-Back-End <a name="about-project"></a>
-
-**Hello-Rails-Back-End** project provides an API endpoint that selects a random greeting form the **Messages** table.
+**Vespa-Backend** project provides an API endpoint that selects a random greeting form the **Messages** table.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -63,15 +61,15 @@
 
 ### Key Features <a name="key-features"></a>
 
-- **Show Random Greeting**
-- **Feature 2**
-- **Feature 3**
+- **Landing Page**
+- **Details Page**
+- **Booking Page**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🚀 React App Link <a name="react-app-link"></a>
 
-- [React-App-Link](https://github.com/ZikaZaki/hello-react-front-end)
+- [React-App-Link](https://github.com/ZikaZaki/vespa-frontend)
 
 ## 🚀 Live Video Demo (not available yet)<a name="live-video-demo"></a>
 
@@ -103,13 +101,13 @@ Clone this repository to your desired folder:
 
 
 ```sh
-  git clone git@github.com:ZikaZaki/hello-rails-back-end.git
+  git clone git@github.com:ZikaZaki/vespa-backend.git
 ```
 
 Change directory to the project folder:
 
 ```sh
-  cd hello-rails-back-end
+  cd vespa-backend
 ```
 
 ### Install
@@ -150,6 +148,18 @@ or
 - GitHub: [ZikaZaki](https://github.com/ZikaZaki)
 - Twitter: [Zakariya Al-Khamisi](https://twitter.com/ZakariyaKhamisi)
 - LinkedIn: [Zakariya Al-Khamisi](https://www.linkedin.com/in/zackops/)
+
+👤 **Sonick Mumba ([Sonick Mumba](https://github.com/Sonickmumba))**
+
+- [@Sonickmumba](https://github.com/Sonickmumba)
+- [@Sonick](https://twitter.com/MumbaSonick)
+- [Sonick Mumba](https://linkedin.com/in/sonickmumba)
+
+👤 **Marvellous Ibironke**
+
+- GitHub: [@Tommy Marvel](https://github.com/Tommymarvel)
+- Twitter: [@Tomiwa Ibironke](https://twitter.com/tomiwa_ibironke)
+- LinkedIn: [Marvellous Ibironke](https://www.linkedin.com/in/marvellous-ibironke/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
