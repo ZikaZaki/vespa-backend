@@ -1,0 +1,1 @@
+Rails.application.config.session_store :cookie_store, key: "_vespa_backend_session", domain: "vespa-backend-heroku.herokuapp.com"
