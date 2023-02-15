@@ -1,1 +1,1 @@
-json.partial! "cities/city", city: @city
+json.partial! 'cities/city', city: @city

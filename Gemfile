@@ -77,4 +77,4 @@ group :test do
   gem 'webdrivers'
 end
 
-gem "jsonapi-serializer", "~> 2.2"
+gem 'jsonapi-serializer', '~> 2.2'

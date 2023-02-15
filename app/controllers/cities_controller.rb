@@ -1,14 +1,24 @@
 class CitiesController < ApplicationController
-  before_action :set_city, only: %i[ show edit update destroy ]
+  before_action :set_city, only: %i[show edit update destroy]
 
   # GET /cities or /cities.json
   def index
     @cities = City.all
+    # render json: @cities.map { |city| CitySerializer.new(city).serializable_hash[:data][:attributes] }
+    render json: @cities.map { |city|
+                   {
+                     id: city.id,
+                     name: city.name,
+                     description: city.description,
+                     created_at: city.created_at,
+                     updated_at: city.updated_at,
+                     image_url: rails_blob_url(city.image)
+                   }
+                 }
   end
 
   # GET /cities/1 or /cities/1.json
-  def show
-  end
+  def show; end
 
   # GET /cities/new
   def new
@@ -16,8 +26,7 @@ class CitiesController < ApplicationController
   end
 
   # GET /cities/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /cities or /cities.json
   def create
@@ -25,7 +34,7 @@ class CitiesController < ApplicationController
 
     respond_to do |format|
       if @city.save
-        format.html { redirect_to city_url(@city), notice: "City was successfully created." }
+        format.html { redirect_to city_url(@city), notice: 'City was successfully created.' }
         format.json { render :show, status: :created, location: @city }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -38,7 +47,7 @@ class CitiesController < ApplicationController
   def update
     respond_to do |format|
       if @city.update(city_params)
-        format.html { redirect_to city_url(@city), notice: "City was successfully updated." }
+        format.html { redirect_to city_url(@city), notice: 'City was successfully updated.' }
         format.json { render :show, status: :ok, location: @city }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -52,7 +61,7 @@ class CitiesController < ApplicationController
     @city.destroy
 
     respond_to do |format|
-      format.html { redirect_to cities_url, notice: "City was successfully destroyed." }
+      format.html { redirect_to cities_url, notice: 'City was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -61,19 +70,24 @@ class CitiesController < ApplicationController
     @city = City.last
     # render json: CitySerializer.new(@city).serializable_hash[:data][:attributes]
     render json: {
-      city: @city,
+      id: @city.id,
+      name: @city.name,
+      description: @city.description,
+      created_at: @city.created_at,
+      updated_at: @city.updated_at,
       image_url: rails_blob_url(@city.image)
     }
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_city
-      @city = City.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def city_params
-      params.require(:city).permit(:name, :description, :image)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_city
+    @city = City.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def city_params
+    params.require(:city).permit(:name, :description, :image)
+  end
 end
