@@ -1,1 +1,1 @@
-json.partial! "motorcycles/motorcycle", motorcycle: @motorcycle
+json.partial! 'motorcycles/motorcycle', motorcycle: @motorcycle

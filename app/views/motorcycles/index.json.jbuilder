@@ -1,1 +1,1 @@
-json.array! @motorcycles, partial: "motorcycles/motorcycle", as: :motorcycle
+json.array! @motorcycles, partial: 'motorcycles/motorcycle', as: :motorcycle
