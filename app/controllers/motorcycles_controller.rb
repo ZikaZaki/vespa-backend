@@ -3,22 +3,22 @@ class MotorcyclesController < ApplicationController
 
   # GET /motorcycles or /motorcycles.json
   def index
-    @motorcycles = Motorcycle.all
+    @motorcycles = Motorcycle.all.order('production_date DESC')
     # render json: @cities.map { |city| CitySerializer.new(city).serializable_hash[:data][:attributes] }
     render json: @motorcycles.map { |motor|
-                   {
-                     motor_id: motor.id,
-                     motor_name: motor.name,
-                     motor_description: motor.description,
-                     motor_no: motor.no,
-                     finance_fee: motor.finance_fee,
-                     purchase_fee: motor.purchase_fee,
-                     production_date: motor.production_date,
-                     created_at: motor.created_at,
-                     updated_at: motor.updated_at,
-                     image_url: rails_blob_url(motor.image)
-                   }
-                 }
+      {
+        id: motor.id,
+        model_no: motor.model_no,
+        name: motor.name,
+        finance_fee: motor.finance_fee,
+        purchase_fee: motor.purchase_fee,
+        production_date: motor.production_date,
+        description: motor.description,
+        created_at: motor.created_at,
+        updated_at: motor.updated_at,
+        image_url: rails_blob_url(motor.image)
+      }
+    }
   end
 
   # GET /motorcycles/1 or /motorcycles/1.json
@@ -79,7 +79,7 @@ class MotorcyclesController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def motorcycle_params
-    params.require(:motorcycle).permit(:model_no, :model_name, :finance_fee, :purchase_fee, :production_date,
+    params.require(:motorcycle).permit(:model_no, :name, :finance_fee, :purchase_fee, :production_date,
                                        :description, :image)
   end
 end
