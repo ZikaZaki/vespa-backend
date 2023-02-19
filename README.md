@@ -115,9 +115,8 @@ Install this project with:
 
 To run the project, execute the following command:
 
-
 ```sh
-  rails server
+  rails server -p 3001
 ```
 -
 
