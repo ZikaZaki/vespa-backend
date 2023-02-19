@@ -4,7 +4,6 @@ class MotorcyclesController < ApplicationController
   # GET /motorcycles or /motorcycles.json
   def index
     @motorcycles = Motorcycle.all.order('production_date DESC')
-    # render json: @cities.map { |city| CitySerializer.new(city).serializable_hash[:data][:attributes] }
     render json: @motorcycles.map { |motor|
       {
         id: motor.id,

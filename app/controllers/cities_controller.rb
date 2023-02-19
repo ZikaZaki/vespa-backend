@@ -4,7 +4,6 @@ class CitiesController < ApplicationController
   # GET /cities or /cities.json
   def index
     @cities = City.all
-    # render json: @cities.map { |city| CitySerializer.new(city).serializable_hash[:data][:attributes] }
     render json: @cities.map { |city|
       {
         id: city.id,
@@ -68,7 +67,6 @@ class CitiesController < ApplicationController
 
   def latest
     @city = City.last
-    # render json: CitySerializer.new(@city).serializable_hash[:data][:attributes]
     render json: {
       id: @city.id,
       name: @city.name,
