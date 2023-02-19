@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  model_no: 1
+  model_name: MyString
+  finance_fee: 9.99
+  purchase_fee: 9.99
+  production_date: 2023-02-14
+  description: MyString
+
+two:
+  model_no: 1
+  model_name: MyString
+  finance_fee: 9.99
+  purchase_fee: 9.99
+  production_date: 2023-02-14
+  description: MyString

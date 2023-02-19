@@ -1,24 +1,179 @@
-# README
+<a name="readme-top"></a>
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# 📗 Table of Contents
 
-Things you may want to cover:
+- [📗 Table of Contents](#-table-of-contents)
+- [📖  Vespa ](#--vespa-)
+    - [Frontend Repository Link](#frontend-repository-link)
+  - [🛠 Built With ](#-built-with-)
+    - [Full-Stack Stack ](#full-stack-stack-)
+    - [Key Features ](#key-features-)
+  - [🚀 Live Demo ](#-live-demo-)
+  - [💻 Getting Started ](#-getting-started-)
+    - [Prerequisites](#prerequisites)
+    - [Setup](#setup)
+    - [Install](#install)
+    - [Usage](#usage)
+    - [Run tests](#run-tests)
+  - [👥 Authors ](#-authors-)
+  - [🤝 Contributing ](#-contributing-)
+  - [🙏 Acknowledgments ](#-acknowledgments-)
+  - [📝 License ](#-license-)
 
-* Ruby version
+# 📖  Vespa <a name="about-project"></a>
 
-* System dependencies
+> Vespa is a motorcycle rental app that allows users to add motorcycle models and cities, as well as make reservations.
 
-* Configuration
+### Frontend Repository [Link](https://github.com/ZikaZaki/vespa-frontend)
 
-* Database creation
+## 🛠 Built With <a name="built-with"></a>
 
-* Database initialization
+### Full-Stack Stack <a name="tech-stack"></a>
 
-* How to run the test suite
+<details>
+  <summary>Client</summary>
+  <ul>
+    <li><a href="https://www.javascript.com/">JS</a></li>
+  </ul>
+</details>
 
-* Services (job queues, cache servers, search engines, etc.)
+<details>
+  <summary>Server</summary>
+  <ul>
+    <li><a href="https://rubyonrails.org/">Ruby On Rails</a></li>
+  </ul>
+</details>
 
-* Deployment instructions
+<details>
+<summary>Database</summary>
+  <ul>
+    <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
+  </ul>
+</details>
 
-* ...
+<!-- Features -->
+
+### Key Features <a name="key-features"></a>
+
+- **Add user has the ability to delete and add Reservation**
+- **Add user has the ability to delete and add Motorcycle model**
+- **The user has the ability to delete and add cities**
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- LIVE DEMO -->
+
+## 🚀 Live Demo <a name="live-demo"></a>
+
+- [Live Demo Link](https://yourdeployedapplicationlink.com)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- GETTING STARTED -->
+
+## 💻 Getting Started <a name="getting-started"></a>
+
+> Describe how a new developer could make use of your project.
+
+To get a local copy up and running, follow these steps.
+
+### Prerequisites
+
+In order to run this project you need:
+
+
+```sh
+ gem install rails
+```
+
+
+### Setup
+
+Clone this repository to your desired folder:
+
+
+```sh
+  cd my-folder
+  git clone https://github.com/ZikaZaki/vespa-backend.git
+```
+-
+
+### Install
+
+Install this project with:
+
+```sh
+  cd budget-app
+  bundle install
+  rails db:create
+  rails db:migrate 
+  rails db:seed
+```
+-
+
+### Usage
+
+To run the project, execute the following command:
+
+```sh
+  rails server -p 3001
+```
+-
+
+### Run tests
+
+To run tests, run the following command:
+
+```sh
+  rspec
+```
+-
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- AUTHORS -->
+
+## 👥 Authors <a name="authors"></a>
+
+👤 **Zakariya Al-Khamisi ([ZikaZaki](https://github.com/ZikaZaki))**
+
+- GitHub: [ZikaZaki](https://github.com/ZikaZaki)
+- Twitter: [Zakariya Al-Khamisi](https://twitter.com/ZakariyaKhamisi)
+- LinkedIn: [Zakariya Al-Khamisi](https://www.linkedin.com/in/zackops/)
+
+👤 **Marvellous Ibironke**
+
+- GitHub: [Tommy Marvel](https://github.com/Tommymarvel)
+- Twitter: [Tomiwa Ibironke](https://twitter.com/tomiwa_ibironke)
+- LinkedIn: [Marvellous Ibironke](https://www.linkedin.com/in/marvellous-ibironke/)
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+<!-- CONTRIBUTING -->
+
+## 🤝 Contributing <a name="contributing"></a>
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](https://github.com/ZikaZaki/vespa-backend/issues).
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- ACKNOWLEDGEMENTS -->
+
+## 🙏 Acknowledgments <a name="acknowledgements"></a>
+
+I would like to acknowledge [Murat Korkmaz](https://www.behance.net/muratk) for his exceptional design work on Behance. His creative and innovative approach to design has been truly inspiring and his work has undoubtedly set a high standard in the design industry. Thank you for the opportunity to have had access to your work on Behance.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+<!-- LICENSE -->
+
+## 📝 License <a name="license"></a>
+
+This project is [MIT](./MIT.md) licensed.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>

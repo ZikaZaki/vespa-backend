@@ -1,0 +1,47 @@
+<%= form_with(model: motorcycle) do |form| %>
+  <% if motorcycle.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(motorcycle.errors.count, "error") %> prohibited this motorcycle from being saved:</h2>
+
+      <ul>
+        <% motorcycle.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :model_no, style: "display: block" %>
+    <%= form.number_field :model_no %>
+  </div>
+
+  <div>
+    <%= form.label :model_name, style: "display: block" %>
+    <%= form.text_field :model_name %>
+  </div>
+
+  <div>
+    <%= form.label :finance_fee, style: "display: block" %>
+    <%= form.text_field :finance_fee %>
+  </div>
+
+  <div>
+    <%= form.label :purchase_fee, style: "display: block" %>
+    <%= form.text_field :purchase_fee %>
+  </div>
+
+  <div>
+    <%= form.label :production_date, style: "display: block" %>
+    <%= form.date_field :production_date %>
+  </div>
+
+  <div>
+    <%= form.label :description, style: "display: block" %>
+    <%= form.text_field :description %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

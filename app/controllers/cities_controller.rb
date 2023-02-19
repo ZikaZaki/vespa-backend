@@ -4,17 +4,16 @@ class CitiesController < ApplicationController
   # GET /cities or /cities.json
   def index
     @cities = City.all
-    # render json: @cities.map { |city| CitySerializer.new(city).serializable_hash[:data][:attributes] }
     render json: @cities.map { |city|
-                   {
-                     id: city.id,
-                     name: city.name,
-                     description: city.description,
-                     created_at: city.created_at,
-                     updated_at: city.updated_at,
-                     image_url: rails_blob_url(city.image)
-                   }
-                 }
+      {
+        id: city.id,
+        name: city.name,
+        description: city.description,
+        created_at: city.created_at,
+        updated_at: city.updated_at,
+        image_url: rails_blob_url(city.image)
+      }
+    }
   end
 
   # GET /cities/1 or /cities/1.json
@@ -68,7 +67,6 @@ class CitiesController < ApplicationController
 
   def latest
     @city = City.last
-    # render json: CitySerializer.new(@city).serializable_hash[:data][:attributes]
     render json: {
       id: @city.id,
       name: @city.name,
