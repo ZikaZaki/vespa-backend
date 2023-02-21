@@ -3,7 +3,20 @@ class ReservationsController < ApplicationController
 
   # GET /reservations or /reservations.json
   def index
-    @reservations = Reservation.all
+    @reservations = @current_user.reservations.all.includes(:city, :motorcycle)
+    render json: @reservations.map { |reservation|
+      {
+        id: reservation.id,
+        city: reservation.city.name,
+        motorcycle: reservation.motorcycle.name,
+        reserve_date: reservation.reserve_date,
+        returning_date: reservation.returning_date,
+        created_at: reservation.created_at,
+        updated_at: reservation.updated_at
+      }
+    }
+    # @reservations = Reservation.all.includes(:user, :motorcycle, :city)
+    # render json: @reservations
   end
 
   # GET /reservations/1 or /reservations/1.json
@@ -22,6 +35,7 @@ class ReservationsController < ApplicationController
   # POST /reservations or /reservations.json
   def create
     @reservation = Reservation.new(reservation_params)
+    @reservation.user = @current_user
 
     respond_to do |format|
       if @reservation.save
