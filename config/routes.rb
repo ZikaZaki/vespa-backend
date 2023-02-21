@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :reservations
   resources :motorcycles
   resources :cities
   resources :sessions, only: [:create]

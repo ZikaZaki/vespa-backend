@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  reserve_date: 2023-02-21
+  returning_date: 2023-02-21
+  user: one
+  motorcycle: one
+  city: one
+
+two:
+  reserve_date: 2023-02-21
+  returning_date: 2023-02-21
+  user: two
+  motorcycle: two
+  city: two

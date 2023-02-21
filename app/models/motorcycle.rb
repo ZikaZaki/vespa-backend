@@ -1,5 +1,8 @@
 class Motorcycle < ApplicationRecord
   has_one_attached :image
+  has_many :reservations
+  has_many :users, through: :reservations
+  has_many :cities, through: :reservations
 
   validates_presence_of :model_no
   validates_uniqueness_of :model_no
