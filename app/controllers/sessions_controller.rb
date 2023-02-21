@@ -14,6 +14,8 @@ class SessionsController < ApplicationController
         user: @user
       }
     else
+      @current_user = nil # this is to prevent the user from being logged in
+      reset_session # this is to prevent the user from being logged in
       render json: { status: 401 }
     end
   end
@@ -25,6 +27,7 @@ class SessionsController < ApplicationController
         user: @current_user
       }
     else
+      reset_session
       render json: {
         logged_in: false
       }
@@ -32,7 +35,9 @@ class SessionsController < ApplicationController
   end
 
   def logout
+    @current_user = nil # this is to prevent the user from being logged in
     reset_session
+    # cookies.delete :user_id
     render json: {
       status: 200,
       logged_out: true
