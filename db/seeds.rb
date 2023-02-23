@@ -23,3 +23,51 @@ User.create!(
     password_confirmation: "admin123",
     admin: true
 )
+
+Reservation.create!(
+    user_id: 8,
+    city_id: 12,
+    motorcycle_id: 3,
+    reserve_date: "2021-05-01",
+    returning_date: "2021-05-05"
+)
+
+Reservation.create!(
+    user_id: 8,
+    city_id: 13,
+    motorcycle_id: 3,
+    reserve_date: "2021-05-01",
+    returning_date: "2021-05-05"
+)
+
+Reservation.create!(
+    user_id: 8,
+    city_id: 13,
+    motorcycle_id: 6,
+    reserve_date: "2021-05-01",
+    returning_date: "2021-05-05"
+)
+
+Reservation.create!(
+    user_id: 8,
+    city_id: 12,
+    motorcycle_id: 6,
+    reserve_date: "2021-05-01",
+    returning_date: "2021-05-05"
+)
+
+Reservation.create!(
+    user_id: 10,
+    city_id: 13,
+    motorcycle_id: 7,
+    reserve_date: "2021-05-01",
+    returning_date: "2021-05-05"
+)
+
+Reservation.create!(
+    user_id: 10,
+    city_id: 14,
+    motorcycle_id: 7,
+    reserve_date: "2021-05-01",
+    returning_date: "2021-05-05"
+)

@@ -3,20 +3,51 @@ class ReservationsController < ApplicationController
 
   # GET /reservations or /reservations.json
   def index
-    @reservations = @current_user.reservations.all.includes(:city, :motorcycle)
+    if @current_user&.admin? # if current_user is admin
+      all_reservations
+    else # if current_user is not admin
+      user_reservations
+    end
+  end
+
+  # GET /reservations/all
+  def all_reservations
+    @reservations = Reservation.all.includes(:user, :motorcycle, :city)
     render json: @reservations.map { |reservation|
       {
         id: reservation.id,
+        user_id: reservation.user_id,
+        username: reservation.user.username,
+        user: reservation.user.email,
         city: reservation.city.name,
         motorcycle: reservation.motorcycle.name,
+        motorcycle_image: rails_blob_url(reservation.motorcycle.image),
         reserve_date: reservation.reserve_date,
         returning_date: reservation.returning_date,
         created_at: reservation.created_at,
         updated_at: reservation.updated_at
       }
     }
-    # @reservations = Reservation.all.includes(:user, :motorcycle, :city)
-    # render json: @reservations
+  end
+
+  # GET /reservations/user
+  def user_reservations
+    @reservations = @current_user.reservations.all.includes(:city, :motorcycle)
+    render json: @reservations.map { |reservation|
+      {
+        id: reservation.id,
+        user_id: reservation.user_id,
+        username: reservation.user.username,
+        user: reservation.user.email,
+        city: reservation.city.name,
+        motorcycle: reservation.motorcycle.name,
+        motorcycle_image: rails_blob_url(reservation.motorcycle.image),
+        returning_date: reservation.returning_date,
+        reserve_date: reservation.reserve_date,
+        created_at: reservation.created_at,
+        updated_at: reservation.updated_at
+      }
+    }
   end
 
   # GET /reservations/1 or /reservations/1.json
